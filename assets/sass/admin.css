@@ -1,0 +1,8 @@
+body.post-type-_post_type_archives .add-new-h2,
+body.post-type-_post_type_archives #minor-publishing,
+body.post-type-_post_type_archives #delete-action {
+  display: none; }
+body.post-type-_post_type_archives #major-publishing-actions {
+  border-top: none; }
+
+/*# sourceMappingURL=admin.css.map */
