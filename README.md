@@ -22,7 +22,7 @@ Or manually add it to your `composer.json`:
 
 Add the post type support 'archive-settings' to any post type.
 
-```
+```php
 'supports' => array( 'title', 'editor', 'revisions', 'archive-settings' )
 ```
 
