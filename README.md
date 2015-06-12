@@ -21,5 +21,11 @@ Or manually add it to your `composer.json`:
 ## Usage
 
 Add the post type support 'archive-settings' to any post type.
-	
-	'supports' => array( 'title', 'editor', 'revisions', 'archive-settings' )
+
+```
+'supports' => array( 'title', 'editor', 'revisions', 'archive-settings' )
+```
+
+## Extending
+
+If you'd like to extend the archives post type, it's registered under the post type name `_post_type_archives`.
