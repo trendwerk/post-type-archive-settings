@@ -161,4 +161,17 @@ class TP_Post_Type_Archive_Settings {
 		return $_post_id;
 	}
 
-} new TP_Post_Type_Archive_Settings;
+}
+
+$GLOBALS['tp_post_type_archive_settings'] = new TP_Post_Type_Archive_Settings();
+
+/**
+ * API
+ *
+ * @param string $post_type
+ */
+function get_archive_settings( $post_type ) {
+	global $tp_post_type_archive_settings;
+	
+	return $tp_post_type_archive_settings->get( $post_type );
+}
