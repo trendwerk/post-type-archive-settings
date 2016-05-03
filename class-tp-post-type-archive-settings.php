@@ -57,9 +57,13 @@ class TP_Post_Type_Archive_Settings {
 	 */
 	function register() {
 		register_post_type( $this->post_type, apply_filters( 'tp_pt_archive_settings_register', array(
+			'capabilities'      => array(
+				'create_posts'  => false,
+			),
 			'labels'            => array(
 				'edit_item'     => __( 'Archive settings', 'post-type-archive-settings' ),
 			),
+			'map_meta_cap'      => true,
 			'public'            => false,
 			'show_ui'           => true,
 			'show_in_menu'      => false,
