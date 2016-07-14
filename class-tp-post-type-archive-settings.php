@@ -4,11 +4,11 @@
  * Description: Settings for post type archives.
  *
  * Plugin URI: https://github.com/trendwerk/post-type-archive-settings
- * 
+ *
  * Author: Trendwerk
  * Author URI: https://github.com/trendwerk
- * 
- * Version: 1.0.2
+ *
+ * Version: 1.0.3
  */
 
 class TP_Post_Type_Archive_Settings {
@@ -176,6 +176,6 @@ $GLOBALS['tp_post_type_archive_settings'] = new TP_Post_Type_Archive_Settings();
  */
 function get_archive_settings( $post_type ) {
 	global $tp_post_type_archive_settings;
-	
+
 	return $tp_post_type_archive_settings->get( $post_type );
 }
