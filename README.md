@@ -6,16 +6,8 @@ Settings for post type archives. Made for WordPress.
 This plugin uses post types to edit the actual archive settings. This will allow you to easily extend archives with all features available for post types.
 
 ## Installation
-If you're using Composer to manage WordPress, add this plugin to your project's dependencies. Run:
 ```sh
-composer require trendwerk/post-type-archive-settings 1.0.3
-```
-
-Or manually add it to your `composer.json`:
-```json
-"require": {
-	"trendwerk/post-type-archive-settings": "1.0.3"
-},
+composer require trendwerk/post-type-archive-settings
 ```
 
 ## Usage
