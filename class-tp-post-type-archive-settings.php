@@ -82,7 +82,7 @@ class TP_Post_Type_Archive_Settings {
 
 		foreach( $this->post_types as $post_type ) {
 			if( $archive = $this->get( $post_type ) )
-				add_submenu_page( 'edit.php?post_type=' . $post_type, __( 'Archive settings', 'post-type-archive-settings' ), __( 'Archive settings', 'post-type-archive-settings' ), 'publish_posts', str_replace( admin_url(), '', get_edit_post_link( $archive->ID ) ) );
+				add_submenu_page( $this->getEditLink($post_type), __( 'Archive settings', 'post-type-archive-settings' ), __( 'Archive settings', 'post-type-archive-settings' ), 'publish_posts', str_replace( admin_url(), '', get_edit_post_link( $archive->ID ) ) );
 		}
 	}
 
@@ -100,7 +100,7 @@ class TP_Post_Type_Archive_Settings {
 
 		$submenu_file = str_replace( admin_url(), '', get_edit_post_link( $post->ID ) );
 
-		return 'edit.php?post_type=' . get_post_meta( $post->ID, '_post_type', true );
+		return $this->getEditLink(get_post_meta( $post->ID, '_post_type', true ));
 	}
 
 	/**
@@ -163,6 +163,17 @@ class TP_Post_Type_Archive_Settings {
 		update_post_meta( $_post_id, '_post_type', $post_type->name );
 
 		return $_post_id;
+	}
+
+	private function getEditLink($postType)
+	{
+		if ('post' === $postType) {
+			$parentLink = 'edit.php';
+		} else {
+			$parentLink = 'edit.php?post_type=' . $postType;
+		}
+
+		return $parentLink;
 	}
 
 }
